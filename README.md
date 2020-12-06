@@ -1,7 +1,7 @@
 # attendence-management
 
 # prerequisite
- make sure following application is running on your system:
+ Make sure following application is running on your system:
   1) Mysql
   2) Redis
 
