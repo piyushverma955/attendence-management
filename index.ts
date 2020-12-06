@@ -9,13 +9,15 @@ const router = express.Router();
 const app = express();
 import userController from "./controller/user";
 import subjectController from "./controller/subject";
+import config = require("./config");
+const _redis = config.redis;
 
 app.use(
   session({
     secret: "ssshhhhh",
     store: new redisStore({
-      host: "localhost",
-      port: 6379,
+      host: _redis.host,
+      port: _redis.port,
       client: client,
       ttl: 15 * 24 * 3600
     }),
